@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b447ovncqfpmt"]
+[gd_scene load_steps=12 format=3 uid="uid://b447ovncqfpmt"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Sprites/Tiles/tiles_packed.png" id="1_p6w3q"]
 [ext_resource type="Script" path="res://Scritps/Player.gd" id="2_qww44"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://i1mx5y540ksj" path="res://Scenes/Enemy.tscn" id="4_v5v7v"]
 [ext_resource type="PackedScene" uid="uid://cawfkjwn8corb" path="res://Scenes/Spikes.tscn" id="5_ar6in"]
 [ext_resource type="PackedScene" uid="uid://yeiflckxanvc" path="res://Scenes/Coin.tscn" id="6_8neb3"]
+[ext_resource type="PackedScene" uid="uid://b6kumdakqn2ef" path="res://Scenes/EndFlag.tscn" id="7_i4d3t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bbyg5"]
 texture = ExtResource("1_p6w3q")
@@ -683,7 +684,9 @@ position = Vector2(80, -11)
 position = Vector2(-44, -11)
 
 [node name="Coin4" parent="." instance=ExtResource("6_8neb3")]
-position = Vector2(192, -59)
+position = Vector2(192.079, -74.92)
 
 [node name="Coin5" parent="." instance=ExtResource("6_8neb3")]
-position = Vector2(290, -59)
+position = Vector2(290.079, -74.9202)
+
+[node name="EndFlag" parent="." instance=ExtResource("7_i4d3t")]
