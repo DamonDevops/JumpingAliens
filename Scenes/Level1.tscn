@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b447ovncqfpmt"]
+[gd_scene load_steps=11 format=3 uid="uid://b447ovncqfpmt"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Sprites/Tiles/tiles_packed.png" id="1_p6w3q"]
 [ext_resource type="Script" path="res://Scritps/Player.gd" id="2_qww44"]
@@ -624,6 +624,11 @@ sources/0 = SubResource("TileSetAtlasSource_bbyg5")
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8dy87"]
 height = 25.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_sfph2"]
+font_size = 48
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Main" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -646,6 +651,14 @@ shape = SubResource("CapsuleShape2D_8dy87")
 position = Vector2(0, 13)
 zoom = Vector2(3, 3)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+
+[node name="ScoreText" type="Label" parent="Player/CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score: 0 "
+label_settings = SubResource("LabelSettings_sfph2")
+
 [node name="Enemy" parent="." instance=ExtResource("4_v5v7v")]
 position = Vector2(112, -13)
 
@@ -657,4 +670,20 @@ position = Vector2(289, -28)
 
 [node name="Spikes" parent="." instance=ExtResource("5_ar6in")]
 
+[node name="Spikes2" parent="." instance=ExtResource("5_ar6in")]
+position = Vector2(372, -43)
+
 [node name="Coin" parent="." instance=ExtResource("6_8neb3")]
+position = Vector2(26, -11)
+
+[node name="Coin2" parent="." instance=ExtResource("6_8neb3")]
+position = Vector2(80, -11)
+
+[node name="Coin3" parent="." instance=ExtResource("6_8neb3")]
+position = Vector2(-44, -11)
+
+[node name="Coin4" parent="." instance=ExtResource("6_8neb3")]
+position = Vector2(192, -59)
+
+[node name="Coin5" parent="." instance=ExtResource("6_8neb3")]
+position = Vector2(290, -59)
